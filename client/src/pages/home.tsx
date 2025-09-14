@@ -7,11 +7,16 @@ import PlatformCapabilities from "@/components/platform-capabilities";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 
-export default function Home() {
+type HomeProps = {
+  showNavLinks: boolean;
+  setShowNavLinks: (val: boolean) => void;
+};
+
+export default function Home({ showNavLinks, setShowNavLinks }: HomeProps) {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      <HeroSection />
+      <Navigation showTargetLinks={!showNavLinks} />
+      <HeroSection onVisibilityChange={setShowNavLinks} />
       <ProblemsSection />
       <MissionSection />
       <UserTypesSection />
