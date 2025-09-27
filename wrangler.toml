@@ -1,15 +1,5 @@
 name = "nexfounders-landing-page"
-type = "static"
+compatibility_date = "2025-09-27"
 
-account_id = "591ff02ba9c83f77c76fd78b4a347306"
-workers_dev = true
-
-# This tells Pages where to find your final build output
+# Tell Cloudflare Pages where to find the build output
 pages_build_output_dir = "dist/public"
-
-[site]
-bucket = "./dist/public"
-entry-point = "workers-site"
-
-[build]
-command = "npm run build"
