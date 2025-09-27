@@ -1,0 +1,9 @@
+name = "nexfounders-landing-page"
+type = "static"
+
+account_id = "591ff02ba9c83f77c76fd78b4a347306"
+workers_dev = true
+
+[site]
+bucket = "./dist/public"
+entry-point = "workers-site"

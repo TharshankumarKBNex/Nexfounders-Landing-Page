@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useLocation } from "wouter";
 
 type HeroSectionProps = {
   onVisibilityChange: (visible: boolean) => void;
@@ -8,12 +9,17 @@ type HeroSectionProps = {
 export default function HeroSection({ onVisibilityChange }: HeroSectionProps) {
   const { toast } = useToast();
   const sectionRef = useRef<HTMLElement | null>(null);
+  const [, setLocation] = useLocation(); // hook for navigation
 
   const handleStartJourney = () => {
     toast({
       title: "Welcome to NexFounders!",
       description: "Let's start building your startup journey together.",
     });
+  };
+
+  const handleFoundersRedirect = () => {
+    setLocation("/founders"); // navigate to founders page
   };
 
   const handleExploreAI = () => {
@@ -78,7 +84,7 @@ export default function HeroSection({ onVisibilityChange }: HeroSectionProps) {
         <div className="max-w-md mx-auto mb-16 px-2">
           <div className="flex justify-center items-center gap-4 mb-4">
             <button
-              onClick={handleStartJourney}
+              onClick={handleFoundersRedirect}
               className="border-2 border-white/30 text-white px-6 py-3 rounded-xl font-semibold text-sm sm:text-base hover:bg-white/10 transition-all backdrop-blur-sm flex items-center justify-center"
             >
               <i className="fas fa-rocket mr-2"></i>
