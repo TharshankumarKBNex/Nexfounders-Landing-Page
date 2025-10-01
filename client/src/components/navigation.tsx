@@ -33,21 +33,21 @@ export default function Navigation({ showTargetLinks }: { showTargetLinks: boole
           <div className="hidden md:flex items-center space-x-8">
             {showTargetLinks && (
               <>
-                <a href="#founders" className="text-gray-300 hover:text-white transition-colors">For Founders</a>
-                <a href="#investors" className="text-gray-300 hover:text-white transition-colors">For Investors</a>
-                <a href="#talents" className="text-gray-300 hover:text-white transition-colors">For Talents</a>
+                <a href="/founders" className="text-gray-300 hover:text-white transition-colors">For Founders</a>
+                <a href="/investors" className="text-gray-300 hover:text-white transition-colors">For Investors</a>
+                <a href="/talents" className="text-gray-300 hover:text-white transition-colors">For Talents</a>
               </>
             )}
-            <Link href="/features" className={`transition-colors ${isActive("/features") ? "text-white" : "text-gray-300 hover:text-white"}`}>
+            {/* <Link href="/features" className={`transition-colors ${isActive("/features") ? "text-white" : "text-gray-300 hover:text-white"}`}>
               Features
             </Link>
             <Link href="/about" className={`transition-colors ${isActive("/about") ? "text-white" : "text-gray-300 hover:text-white"}`}>
               About
-            </Link>
+            </Link> */}
             <Link href="/pricing" className={`transition-colors ${isActive("/pricing") ? "text-white" : "text-gray-300 hover:text-white"}`}>
               Pricing
             </Link>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Sign In</a>
+            {/* <a href="#" className="text-gray-300 hover:text-white transition-colors">Sign In</a> */}
             <button className="bg-white text-nexdark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Get Started
               <i className="fas fa-arrow-right ml-2"></i>

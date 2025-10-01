@@ -22,6 +22,10 @@ export default function HeroSection({ onVisibilityChange }: HeroSectionProps) {
     setLocation("/founders"); // navigate to founders page
   };
 
+  const handleInvestorsRedirect = () => {
+    setLocation("/Investors"); // navigate to Investors page
+  };
+
   const handleExploreAI = () => {
     toast({
       title: "AI Tools Coming Soon",
@@ -91,7 +95,7 @@ export default function HeroSection({ onVisibilityChange }: HeroSectionProps) {
               Founders
             </button>
             <button
-              onClick={handleExploreAI}
+              onClick={handleInvestorsRedirect}
               className="border-2 border-white/30 text-white px-6 py-3 rounded-xl font-semibold text-sm sm:text-base hover:bg-white/10 transition-all backdrop-blur-sm flex items-center justify-center"
             >
               <i className="fas fa-brain mr-2"></i>

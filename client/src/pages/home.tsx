@@ -1,9 +1,10 @@
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
-import ProblemsSection from "@/components/problems-section";
-import UserTypesSection from "@/components/user-types-section";
-import PlatformCapabilities from "@/components/platform-capabilities";
-import FinalCTA from "@/components/final-cta";
+import {ModulesShowcase} from "@/components/moduletypes"
+import {UnifiedEcosystem} from "@/components/unified-eco-system"
+import {PlatformFeatures} from "@/components/platform-features"
+import {SuccessStories} from "@/components/success-stories"
+import { FinalCTA } from "@/components/final-cta";
 import Footer from "@/components/footer";
 
 type HomeProps = {
@@ -16,9 +17,10 @@ export default function Home({ showNavLinks, setShowNavLinks }: HomeProps) {
     <div className="min-h-screen">
       <Navigation showTargetLinks={!showNavLinks} />
       <HeroSection onVisibilityChange={setShowNavLinks} />
-      <ProblemsSection />
-      <UserTypesSection />
-      <PlatformCapabilities />
+      <ModulesShowcase />
+      <UnifiedEcosystem />
+      <PlatformFeatures />
+      <SuccessStories />
       <FinalCTA />
       <Footer />
     </div>
