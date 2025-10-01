@@ -2,7 +2,12 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { useToast } from "@/hooks/use-toast";
 
-export default function Pricing() {
+type HomeProps = {
+  showNavLinks: boolean;
+  setShowNavLinks: (val: boolean) => void;
+};
+
+export default function Pricing({ showNavLinks, setShowNavLinks }: HomeProps) {
   const { toast } = useToast();
 
   const handleGetStarted = (plan: string) => {
@@ -14,7 +19,7 @@ export default function Pricing() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
+      <Navigation showTargetLinks={!showNavLinks} />
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-slate-50 to-white">

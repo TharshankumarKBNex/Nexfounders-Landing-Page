@@ -23,7 +23,11 @@ export default function HeroSection({ onVisibilityChange }: HeroSectionProps) {
   };
 
   const handleInvestorsRedirect = () => {
-    setLocation("/Investors"); // navigate to Investors page
+    setLocation("/investors"); // navigate to Investors page
+  };
+
+  const handleTalentRedirect = () => {
+    setLocation("/talent"); // navigate to talent page
   };
 
   const handleExploreAI = () => {
@@ -102,7 +106,7 @@ export default function HeroSection({ onVisibilityChange }: HeroSectionProps) {
               Investors
             </button>
             <button
-              onClick={handleStartJourney}
+              onClick={handleTalentRedirect}
               className="border-2 border-white/30 text-white px-6 py-3 rounded-xl font-semibold text-sm sm:text-base hover:bg-white/10 transition-all backdrop-blur-sm flex items-center justify-center"
             >
               <i className="fas fa-rocket mr-2"></i>

@@ -8,10 +8,17 @@ import {
   StartupBlogging,
   EntrepreneurFinalCTA
 } from '../components/founders/EntrepreneurDashboard';
+import Navigation from '@/components/navigation';
 
-export default function founders() {
+type HomeProps = {
+  showNavLinks: boolean;
+  setShowNavLinks: (val: boolean) => void;
+};
+
+export default function founders({ showNavLinks, setShowNavLinks }: HomeProps) {
   return (
     <div className="min-h-screen">
+      <Navigation showTargetLinks={!showNavLinks} />
       <EntrepreneurHero />
       <InvestorApplications />
       <TalentSourcing />

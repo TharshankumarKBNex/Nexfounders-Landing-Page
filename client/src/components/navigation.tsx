@@ -35,7 +35,7 @@ export default function Navigation({ showTargetLinks }: { showTargetLinks: boole
               <>
                 <a href="/founders" className="text-gray-300 hover:text-white transition-colors">For Founders</a>
                 <a href="/investors" className="text-gray-300 hover:text-white transition-colors">For Investors</a>
-                <a href="/talents" className="text-gray-300 hover:text-white transition-colors">For Talents</a>
+                <a href="/talent" className="text-gray-300 hover:text-white transition-colors">For Talents</a>
               </>
             )}
             {/* <Link href="/features" className={`transition-colors ${isActive("/features") ? "text-white" : "text-gray-300 hover:text-white"}`}>
@@ -66,9 +66,9 @@ export default function Navigation({ showTargetLinks }: { showTargetLinks: boole
             <div className="flex flex-col space-y-4 px-4">
               {showTargetLinks && (
                 <>
-                  <a href="#founders" className="text-gray-300 hover:text-white transition-colors">For Founders</a>
-                  <a href="#investors" className="text-gray-300 hover:text-white transition-colors">For Investors</a>
-                  <a href="#talents" className="text-gray-300 hover:text-white transition-colors">For Talents</a>
+                  <a href="/founders" className="text-gray-300 hover:text-white transition-colors">For Founders</a>
+                  <a href="/investors" className="text-gray-300 hover:text-white transition-colors">For Investors</a>
+                  <a href="/talent" className="text-gray-300 hover:text-white transition-colors">For Talents</a>
                 </>
               )}
               <Link href="/features" className="text-gray-300 hover:text-white transition-colors">Features</Link>
