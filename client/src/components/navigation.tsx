@@ -6,6 +6,11 @@ export default function Navigation({ showTargetLinks }: { showTargetLinks: boole
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [, setLocation] = useLocation(); // hook for navigation
+
+  const handleGetStartedRedirect = () => {
+    setLocation("/getstarted"); // navigate to GetStarted page
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +53,7 @@ export default function Navigation({ showTargetLinks }: { showTargetLinks: boole
               Pricing
             </Link>
             {/* <a href="#" className="text-gray-300 hover:text-white transition-colors">Sign In</a> */}
-            <button className="bg-white text-nexdark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-nexdark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors" onClick={handleGetStartedRedirect}>
               Get Started
               <i className="fas fa-arrow-right ml-2"></i>
             </button>
@@ -75,10 +80,11 @@ export default function Navigation({ showTargetLinks }: { showTargetLinks: boole
               <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
               <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">Sign In</a>
-              <button className="bg-white text-nexdark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-left">
-                Get Started
-                <i className="fas fa-arrow-right ml-2"></i>
-              </button>
+
+                <button className="bg-white text-nexdark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-left" onClick={handleGetStartedRedirect}>
+                  Get Started
+                  <i className="fas fa-arrow-right ml-2"></i>
+                </button>
             </div>
           </div>
         )}

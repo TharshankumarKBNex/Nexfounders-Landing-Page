@@ -12,6 +12,7 @@ import Pricing from "@/pages/pricing";
 import founders from "@/pages/founders";
 import investors from "@/pages/investors"
 import talent from "@/pages/talent"
+import renderGetStartedPage from "@/pages/GetStartedPage-Render"
 
 function Router({ showNavLinks, setShowNavLinks }: { showNavLinks: boolean; setShowNavLinks: (val: boolean) => void }) {
   return (
@@ -23,6 +24,7 @@ function Router({ showNavLinks, setShowNavLinks }: { showNavLinks: boolean; setS
       <Route path="/founders" component={founders} />
       <Route path="/investors" component={investors} />
       <Route path="/talent" component={talent} />
+      <Route path="/getstarted" component={renderGetStartedPage} />
       <Route component={NotFound} />
     </Switch>
   );
